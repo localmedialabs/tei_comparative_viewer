@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tei_all_ja.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>タイトル</title>
+        <author corresp="人名id">著者/差出人/作成者</author>
+      </titleStmt>
+      <publicationStmt>
+      </publicationStmt>
+      <sourceDesc>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <facsimile sameAs="IIIFManifestURI">
+    <surface xml:id="画像id" ulx="0" uly="0" lrx="右下x座標" lry="右下y座標" sameAs="キャンバスid">
+      <label>番号</label>
+      <graphic width="幅" height="高さ" url="画像のURL" sameAs="画像の基底" />
+      <zone xml:id="ゾーンid" ulx="左上x座標" uly="左上y座標" lrx="右下x座標" lry="右下y座標" />
+    </surface>
+  </facsimile>
+  <text>
+    <body style="writing-mode: vertical-rl;" xml:lang="ja">
+      <div type="翻刻">
+      </div>
+    </body>
+  </text>
+</TEI>

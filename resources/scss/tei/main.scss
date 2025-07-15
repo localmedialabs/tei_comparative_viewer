@@ -1,0 +1,203 @@
+$header-height: 50px;
+.tei {
+  #app {
+    height: calc(100vh - $header-height);
+    flex-direction: column;
+  }
+
+  .tei-header {
+    height: $header-height;
+  }
+
+  .splitpanes {
+    flex: 1;
+  }
+  #mirador {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .panel-container {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+  }
+  .vertical {
+    writing-mode: vertical-rl;
+    max-width: 100%;
+  }
+  .scroll {
+    height: 100%;
+  }
+  .splitpanes__splitter {
+    background-color: rgb(200, 200, 200); /* ボーダーの色 */
+    position: relative;
+    transition: background-color 0.1s ease-in-out;
+    &:hover {
+      background-color: #999; /* ホバー時の背景色 */
+    }
+  }
+  /* 垂直分割 (左右の仕切り) */
+  .splitpanes--vertical > .splitpanes__splitter {
+    width: 6px; /* 水平方向のボーダーの太さ */
+    cursor: ew-resize; /* 水平方向のリサイズカーソル */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3px; /* 縦方向のグリップ幅 */
+      height: 40px; /* 縦方向のグリップ高さ */
+      background-color: #666;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* 水平分割 (上下の仕切り) */
+  .splitpanes--horizontal > .splitpanes__splitter {
+    cursor: ns-resize; /* 垂直方向のリサイズカーソル */
+    height: 6px; /* 水平方向のボーダーの太さ */
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px; /* 横方向のグリップ幅 */
+      height: 3px; /* 横方向のグリップ高さ */
+      background-color: #666;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  #list {
+    background-color: rgb(240, 240, 240);
+  }
+
+  // テキストデータ用
+  span {
+    overflow-wrap: break-word;
+  }
+  .tei-num {
+    text-combine-upright: all;
+  }
+  .tei-persName {
+    color: #008cad;
+    cursor: pointer;
+  }
+  .tei-placeName {
+    color: #4b9900;
+    cursor: pointer;
+  }
+  .tei-date {
+    color: #0625c5;
+  }
+  .tei-hover_ab {
+    background-color: rgba(179, 255, 144, 0.3);
+  }
+  .tei-hover_s {
+    background-color: #ffdd8d7b;
+  }
+  .tei-hover_list_id {
+    background-color: #ffdd8d7b;
+  }
+  .tei-return_point {
+    font-size: 0.5rem;
+    vertical-align: bottom;
+  }
+  .tei-split_text {
+    display: inline-block;
+    position: relative;
+    &-left {
+      position: absolute;
+      font-size: 0.5rem;
+      top: 0px;
+      vertical-align: top;
+      right: 0px;
+    }
+    &-right {
+      position: absolute;
+      font-size: 0.5rem;
+      vertical-align: top;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  .tei-subst-vertical {
+    display: inline-flex;
+    align-items: flex-end;
+    margin-right: 1.2rem;
+    .tei-add {
+      display: inline-block;
+      position: relative;
+      right: -1.2rem;
+      white-space: nowrap;
+    }
+  }
+  .tei-subst-horizontal {
+    display: inline-flex;
+    align-items: flex-end;
+    margin-bottom: 1.2rem;
+    .tei-add {
+      display: inline-block;
+      position: relative;
+      bottom: -1.2rem;
+      white-space: nowrap;
+    }
+  }
+  .tei-del {
+    &_line {
+      color: green;
+      text-decoration: line-through;
+    }
+    &_text {
+      color: black;
+      white-space: nowrap;
+    }
+  }
+  .tei-note-vertical {
+    margin-right: 1.2rem;
+    &_target {
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+    &_text {
+      display: inline-block;
+      position: relative;
+      right: -1.2rem;
+      white-space: nowrap;
+      font-size: 0.75rem;
+    }
+  }
+  .tei-note-horizontal {
+    margin-bottom: 1.2rem;
+    &_target {
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+    &_text {
+      display: inline-block;
+      position: relative;
+      bottom: -1.2rem;
+      white-space: nowrap;
+      font-size: 0.75rem;
+    }
+  }
+  .tei-icon-vertical {
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  .tei-icon-horizontal {
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  .tei-figure {
+    font-size: 0.8rem;
+    cursor: pointer;
+    &_num {
+      text-combine-upright: all;
+    }
+  }
+}

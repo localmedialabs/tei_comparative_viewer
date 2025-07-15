@@ -1,0 +1,24 @@
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// TEIViewer用
+@import "tei/main";
+
+// FontAwesome
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts" !default;
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-display: swap;
+  src: url("/public/assets/fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-size: normal;
+}
+
+body {
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+}
