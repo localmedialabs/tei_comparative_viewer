@@ -1,4 +1,4 @@
-# 📖 TEI/XML テキスト対象ビューワー
+# 📖 TEI-IIIF 対照ビューア
 
 このアプリケーションは、**Laravel + Vue 3 + Inertia.js** をベースに構築された、TEI/XML ファイルを解析して HTML 表示する Web アプリケーションです。
 

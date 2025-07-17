@@ -16,7 +16,7 @@ onMounted(() => {
 <template>
   <header ref="header" class="header sticky-top bg-white align-content-center">
     <div class="container-fluid">
-      <h1 class="fs-4 fw-bold mb-0"><a href="/" class="text-black" style="text-decoration: none;">TEI/XML テキスト対象ビューワー</a></h1>
+      <h1 class="fs-4 fw-bold mb-0"><a href="/" class="text-black" style="text-decoration: none">TEI-IIIF対照ビューア</a></h1>
     </div>
   </header>
 </template>
