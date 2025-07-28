@@ -7,7 +7,7 @@ const props = defineProps({
 const form = props.form;
 
 const page = usePage();
-const flashMessage = page.props.flash.error || "";
+const flashMessage = page.props.flash?.error || "";
 const formattedMessage = flashMessage.replace(/\n/g, "<br>");
 if (!formattedMessage) {
   form.post(route("viewer"));
