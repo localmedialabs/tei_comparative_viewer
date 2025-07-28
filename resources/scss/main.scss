@@ -14,7 +14,7 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts" !default;
 @font-face {
   font-family: "Noto Sans JP";
   font-display: swap;
-  src: url("/public/assets/fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf") format("truetype");
+  src: url("../../../public/assets/fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-size: normal;
 }
